@@ -1,17 +1,42 @@
 .App {
   text-align: center;
-
 }
 
-.spooky {
+.spooky li, .spooky a{
   list-style: none;
   text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
 }
+
 .pumpkin{
   list-style: none;
 }
-.cinnaStick{
-  list-style: none;
+
+.pumpkin:hover{
+  color: cornflowerblue;
+}
+.treat{
+  height: 8vh;
+  width: auto;
+}
+.orange{
+  display: flex;
+  border:black solid 2px;
+  align-items: center;
+  padding: 8px;
+  /* border-radius: 2%; */
+  width: 80%;
+  margin-left: 8%;
+}
+.orange a{
   color: black;
   text-decoration: none;
 }
+.black{
+  display: flex;
+  justify-content: center;
+}
+/* .cinnaStick{
+  list-style: none;
+} */

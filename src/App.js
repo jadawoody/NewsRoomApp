@@ -32,13 +32,13 @@ function App() {
 
 
 
-<Switch>
-  <Route path="/HomePage" render={() => <Home />} />
-  <Route path="/NewsPage" render={() => <GetNews newsDataProp={newsData} />}/> 
-  {/* WHY ARE WE SETTING THE STATE TO THE STATE?? We thought we should be setting the state to the variable holding our map through the API */}
-  <Route path="/SportsPage" render={() => <GetSports />} />
-  <Route path="/CalmPage" render={() => <GetCalm />} />
-</Switch>
+    <Switch>
+      <Route path="/HomePage" render={() => <Home />} />
+      <Route path="/NewsPage" render={() => <GetNews newsDataProp={newsData} />}/> 
+       {/* WHY ARE WE SETTING THE STATE TO THE STATE?? We thought we should be setting the state to the variable holding our map through the API */}
+      <Route path="/SportsPage" render={() => <GetSports />} />
+      <Route path="/CalmPage" render={() => <GetCalm />} />
+    </Switch>
 
     </div>
   );

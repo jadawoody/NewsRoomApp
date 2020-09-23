@@ -3,12 +3,12 @@ import {Link} from 'react-router-dom';
 
 function Home(props) {
     return (
-        <div >
-            <nav>
+        <div className="black">
+            <nav className="ghost">
                <ul className="spooky">
-                   <li><Link to={`/NewsPage`}>Get News</Link></li>
-                   <li><Link to={`/SportsPage`}>Sports Updates</Link></li>
-                   <li><Link to={`/CalmPage`}>Calming Corner</Link></li>
+                   <li className="trick"><Link to={`/NewsPage`}>Get News</Link></li>
+                   <li className="trick"><Link to={`/SportsPage`}>Sports Updates</Link></li>
+                   <li className="trick"><Link to={`/CalmPage`}>Calming Corner</Link></li>
                </ul> 
             </nav>
             <body>
