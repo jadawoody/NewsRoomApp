@@ -40,6 +40,22 @@ function App() {
     getData();
   }, []);
 
+  let [weatherData, setWeatherData] = useState([]);
+  useEffect(() => {
+    console.log(process.env);
+    async function getData() {
+      // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
+      let res = await axios.get(
+        "api.openweathermap.org/data/2.5/weather?zip=94040,us&appid={API key}"
+      );
+      setWeatherData(res.data);
+
+      // setNewsData(news)
+      //  console.log(res.data.articles[0])
+    }
+    getData();
+  }, []);
+
   return (
     <div className="App">
       <h3>Welcome to NewsApp!</h3>
@@ -53,6 +69,10 @@ function App() {
         {/* WHY ARE WE SETTING THE STATE TO THE STATE?? We thought we should be setting the state to the variable holding our map through the API */}
         <Route
           path="/SportsPage"
+          render={() => <GetSports sportsDataProp={sportsData} />}
+        />
+         <Route
+          path="/WeatherPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
         <Route path="/CalmPage" render={() => <GetCalm />} />
