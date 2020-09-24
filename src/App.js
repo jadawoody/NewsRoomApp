@@ -7,26 +7,24 @@ import Home from "./Components/Home";
 import GetSports from "./Components/GetSports";
 import GetCalm from "./Components/GetCalm";
 import GetWeather from "./Components/GetWeather";
-import GetHoroscope from "./Components/GetHoroscope";
+import GetFinance from "./Components/GetFinance";
 // import news from './news.json';
 function App() {
   let [newsData, setNewsData] = useState([]);
   useEffect(() => {
-    console.log(process.env);
+    // console.log(process.env);
     async function getData() {
-      // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
         "https://newsapi.org/v2/top-headlines?country=us&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
       );
       setNewsData(res.data.articles);
-      // setNewsData(news)
-      //  console.log(res.data.articles[0])
     }
     getData();
   }, []);
+
   let [sportsData, setSportsData] = useState([]);
   useEffect(() => {
-    console.log(process.env);
+    // console.log(process.env);
     async function getData() {
       // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
@@ -38,6 +36,17 @@ function App() {
     }
     getData();
   }, []);
+
+  let [finance, setFinance] = useState([]);
+    useEffect(() => {
+      async function getFin() {
+        let res = await axios.get(
+          `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&apikey=demo`)
+        setFinance(res.data);
+      }
+      getFin()
+    }, [])
+
   return (
     <div className="App">
       <h3>Welcome to NewsApp!</h3>
@@ -54,7 +63,7 @@ function App() {
         />
         <Route path="/CalmPage" render={() => <GetCalm />} />
         <Route path="/WeatherPage" render={() => <GetWeather />} />
-        <Route path="/HoroscopePage" render={() => <GetHoroscope />} />
+        <Route path="/FinancePage" render={() => <GetFinance financeProp={finance} />} />
       </Switch>
     </div>
   );
