@@ -6,6 +6,8 @@ import GetNews from "./Components/GetNews";
 import Home from "./Components/Home";
 import GetSports from "./Components/GetSports";
 import GetCalm from "./Components/GetCalm";
+import GetWeather from "./Components/GetWeather";
+import GetHoroscope from "./Components/GetHoroscope";
 // import news from './news.json';
 
 function App() {
@@ -76,6 +78,8 @@ function App() {
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
         <Route path="/CalmPage" render={() => <GetCalm />} />
+        <Route path="/WeatherPage" render={() => <GetWeather />} />
+        <Route path="/HoroscopePage" render={() => <GetHoroscope />} />
       </Switch>
     </div>
   );
