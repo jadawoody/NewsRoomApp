@@ -71,7 +71,7 @@ function App() {
           path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
-         <Route
+        <Route
           path="/WeatherPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
