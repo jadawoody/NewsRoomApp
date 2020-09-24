@@ -46,8 +46,8 @@ function App() {
       let res = await axios.get(
         "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
       );
-      setTech(res.data);
-      console.log(res.data);
+      setTech(res.data.articles);
+      console.log(res.data.articles);
     }
     getData();
   }, []);
