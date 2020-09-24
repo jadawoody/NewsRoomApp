@@ -7,28 +7,26 @@ import Home from "./Components/Home";
 import GetSports from "./Components/GetSports";
 import GetCalm from "./Components/GetCalm";
 import GetWeather from "./Components/GetWeather";
-import GetHoroscope from "./Components/GetHoroscope";
+import GetTech from "./Components/GetTech";
 // import news from './news.json';
 
 function App() {
   let [newsData, setNewsData] = useState([]);
   useEffect(() => {
-    console.log(process.env);
+    // console.log(process.env);
     async function getData() {
-      // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
         "https://newsapi.org/v2/top-headlines?country=us&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
       );
 
       setNewsData(res.data.articles);
-      // setNewsData(news)
-      //  console.log(res.data.articles[0])
     }
     getData();
   }, []);
+
   let [sportsData, setSportsData] = useState([]);
   useEffect(() => {
-    console.log(process.env);
+    // console.log(process.env);
     async function getData() {
       // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
@@ -42,18 +40,14 @@ function App() {
     getData();
   }, []);
 
-  let [weatherData, setWeatherData] = useState([]);
+  let [tech, setTech] = useState([]);
   useEffect(() => {
-    console.log(process.env);
     async function getData() {
-      // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
-        "api.openweathermap.org/data/2.5/weather?zip=94040,us&appid={API key}"
+        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
       );
-      setWeatherData(res.data);
-
-      // setNewsData(news)
-      //  console.log(res.data.articles[0])
+      setTech(res.data);
+      console.log(res.data);
     }
     getData();
   }, []);
@@ -73,13 +67,9 @@ function App() {
           path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
-        <Route
-          path="/WeatherPage"
-          render={() => <GetSports sportsDataProp={sportsData} />}
-        />
         <Route path="/CalmPage" render={() => <GetCalm />} />
         <Route path="/WeatherPage" render={() => <GetWeather />} />
-        <Route path="/HoroscopePage" render={() => <GetHoroscope />} />
+        <Route path="/TechPage" render={() => <GetTech techProp={tech} />} />
       </Switch>
     </div>
   );

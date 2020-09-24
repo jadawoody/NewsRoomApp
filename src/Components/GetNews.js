@@ -1,11 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import '../GetNews.css';
 
 function GetNews(props) {
 let paper = props.newsDataProp.map((eacharticle) => {
     // console.log(paper)
-    console.log(eacharticle)
+    // console.log(eacharticle)
     return (
         <div>
         
