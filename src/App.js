@@ -8,6 +8,7 @@ import GetSports from "./Components/GetSports";
 import GetCalm from "./Components/GetCalm";
 import GetWeather from "./Components/GetWeather";
 import GetTech from "./Components/GetTech";
+import Creator from "./Components/Creator";
 // import news from './news.json';
 
 function App() {
@@ -18,7 +19,6 @@ function App() {
       let res = await axios.get(
         "https://newsapi.org/v2/top-headlines?country=us&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
       );
-
       setNewsData(res.data.articles);
     }
     getData();
@@ -75,8 +75,6 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <h3>Welcome to NewsApp!</h3>
-
       <Switch>
         <Route path="/HomePage" render={() => <Home />} />
         <Route
@@ -100,6 +98,7 @@ function App() {
         />
         <Route path="/WeatherPage" render={() => <GetWeather />} />
         <Route path="/TechPage" render={() => <GetTech techProp={tech} />} />
+        <Route path="/CreatorPage" render={() => <Creator />} />
       </Switch>
     </div>
   );
