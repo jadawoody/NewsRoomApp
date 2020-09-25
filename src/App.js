@@ -51,7 +51,15 @@ function App() {
     }
     getData();
   }, []);
+  let [advice, setAdvice] = useState([]);
+  useEffect(() => {
+    async function getData() {
+      let res = await axios.get("https://api.adviceslip.com/advice");
 
+      setAdvice(res.data.slip);
+    }
+    getData();
+  }, []);
   return (
     <div className="App">
       <h3>Welcome to NewsApp!</h3>
@@ -67,7 +75,10 @@ function App() {
           path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
-        <Route path="/CalmPage" render={() => <GetCalm />} />
+        <Route
+          path="/CalmPage"
+          render={() => <GetCalm adviceProp={advice} />}
+        />
         <Route path="/WeatherPage" render={() => <GetWeather />} />
         <Route path="/TechPage" render={() => <GetTech techProp={tech} />} />
       </Switch>

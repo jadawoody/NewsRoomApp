@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
 
 function GetCalm(props) {
-
-    return (
-        <div>
-            <h3>Calming Corner</h3>
-        </div>
-    );
+  function GetNewAdvice() {
+    return <div>{props.adviceProp}</div>;
+  }
+  console.log(props.adviceProp.advice);
+  return (
+    <div>
+      <h3>Get Your Daily Dose of News!</h3>
+      {/* {props.adviceProp.advice} */}
+      {/* <li className="cinnaStick"><Link to={`NewsPage`}>Get News</Link></li> */}
+      <button onClick={GetNewAdvice()}>Advice!</button>
+    </div>
+  );
 }
 
 export default GetCalm;
