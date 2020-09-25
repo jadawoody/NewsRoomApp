@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import OurLogo from '../images/OURLOGO$.png'
+import OurLogo from "../images/OURLOGO$.png";
 import News from "../images/newstrans.png";
 import Sun from "../images/suntrans.png";
 import Sports from "../images/sportstrans.png";
@@ -21,30 +21,45 @@ function Home(props) {
           <img src={OurLogo} alt="our news logo" className="homelogo"></img>
           <div className="row1">
             <div className="grid-item">
-              <img className="logo" src={News}></img>
-              <Link to={`/NewsPage`}>Top News Headlines</Link>
+              <Link to={`/NewsPage`}>
+                <img className="logo" src={News} />
+              </Link>
+              <span>Top News Headlines</span>
             </div>
             <div className="grid-item">
-              <img className="logo" src={Sun}></img>
-              <Link to={`/WeatherPage`}>Today's Weather</Link>
+              <Link to={`/WeatherPage`}>
+                {" "}
+                <img className="logo" src={Sun} />
+              </Link>
+              <span>Today's Weather</span>
             </div>
+
             <div className="grid-item">
-              <img className="logo" src={Sports}></img>
-              <Link to={`/SportsPage`}>Sports Updates</Link>
+              <Link to={`/SportsPage`}>
+                {" "}
+                <img className="logo" src={Sports} />
+              </Link>
+              <span>Sports Update</span>
             </div>
           </div>
           <div className="row2">
             <div className="grid-item">
-              <img className="logo" src={Calm}></img>
-              <Link to={`/CalmPage`}>Calming Corner</Link>
+              <Link to={`/CalmPage`}>
+                <img className="logo" src={Calm} />
+              </Link>
+              <span>Calming Corner</span>
             </div>
             <div className="grid-item">
-              <img className="logo" src={Tech}></img>
-              <Link to={`/TechPage`}>Tech Updates</Link>
+              <Link to={`/TechPage`}>
+                <img className="logo" src={Tech} />
+              </Link>
+              <span>Tech Updates</span>
             </div>
             <div className="grid-item">
-              <img className="logo" src={Creators}></img>
-              <Link to={`/CreatorPage`}>Meet the Creators</Link>
+              <Link to={`/CreatorPage`}>
+                <img className="logo" src={Creators} />
+              </Link>
+              <span>Meet the Creators</span>
             </div>
           </div>
         </nav>
