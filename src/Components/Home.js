@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import OurLogo from '../images/OFFISHnewsroomLogo3.png'
+import OurLogo from '../images/OURLOGO$.png'
 
 function Home(props) {
   return (
@@ -14,26 +14,26 @@ function Home(props) {
         </header>
       </div>
       <div className="black">
+      
       <nav className="ghost">
-
+      
         <ul className="spooky">
-
-        <img src={OurLogo} alt="our news logo" className="ourlogo" ></img>
-          
+        <Link to={`/HomePage`}><img src={OurLogo} alt="our news logo" className="ourlogo" ></img></Link>
+        {/* <img src={OurLogo} alt="our news logo" className="ourlogo" ></img> */}
           <li className="trick">
-            <Link to={`/NewsPage`}>Top News Headlines</Link>
+            <Link to={`/NewsPage`}>News Headlines</Link>
           </li>
           <li className="trick">
             <Link to={`/WeatherPage`}>Today's Weather</Link>
           </li>
           <li className="trick">
             <Link to={`/SportsPage`}>Sports Updates</Link>
+          </li>  
+          <li className="trick">
+            <Link to={`/TechPage`}>Tech Updates</Link>
           </li>
           <li className="trick">
             <Link to={`/CalmPage`}>Calming Corner</Link>
-          </li>
-          <li className="trick">
-            <Link to={`/TechPage`}>Tech Updates</Link>
           </li>
           <li className="trick"><Link to={`/CreatorPage`}>Meet the Creators</Link></li>
         </ul>

@@ -2,9 +2,12 @@
 * {
   font-family: 'Patua One', cursive;
   color: #393F65;
+  background-color: rgb(214, 230, 245);
 }
 .App {
   text-align: center;
+  /* background: url("./images/blurredLines.png");
+  background-size: contain;   */
   
 }
 
@@ -48,17 +51,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border: black 2px solid;
+  /* border: black 2px solid; */
 }
 .ourlogo{
-  height: 40vh;
+  height: 20vh;
   width: auto;
   position: relative;
   top: 2vh;
   /* left: 2vh; */
-  margin-top: -15vh;
-  margin-bottom: -5vh;
+  /* margin-top: 5vh; */
+  margin-bottom: 5vh;
+}
+.homelogo{
+  height: 20vh;
+  width: auto;
+  position: relative;
+  top: 2vh;
+  /* left: 2vh; */
+  /* margin-top: 5vh; */
+  margin-bottom: 5vh;
 }
 .homeLine1{
   margin-bottom: -10px;
@@ -70,4 +81,11 @@
 }
 .logoAllPage{
   margin-top: 5vh;
+}
+.ghost{
+  margin-top: -5vh;
+}
+.divOfCreators{
+  display: flex;
+  justify-content: space-around;
 }

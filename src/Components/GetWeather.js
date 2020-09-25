@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import {Link} from 'react-router-dom';
+import OurLogo from '../images/OURLOGO$.png';
 function GetWeather(props) {
   let [weather, setWeather] = useState({});
   let [zip, setZip] = useState([]);
@@ -14,7 +15,7 @@ function GetWeather(props) {
     console.log(res.data);
   };
   // weatherSearch()
-  console.log(zip);
+   console.log(zip);
 
   const displayWeather = () => {};
   // function getZip(){
@@ -22,14 +23,16 @@ function GetWeather(props) {
   //     setZip(e.target.value)
   //     }
   // }
-  console.log(zip);
+  
   return (
     <div>
+    <header className="logoAllPage">
+    <Link to={`/HomePage`}><img src={OurLogo} alt="our news logo" className="ourlogo" ></img></Link>
+    </header>
+
       <h3>Welcome To The Weather Page!</h3>
       <p>Search for Today's Weather by Zipcode!</p>
-      {weather.name}
-      {weather.main?.temp}
-
+      
       <input
         onChange={(e) => setZip(e.target.value)}
         value={zip}
@@ -40,6 +43,12 @@ function GetWeather(props) {
       <button onClick={weatherSearch} type="submit">
         Search!
       </button>
+
+      <p>You're In: {weather.name}</p>
+      <p>Current Temperature: {weather.main?.temp}</p>
+      <p>Humidity: {weather.main?.humidity}</p>
+      <p>Today's High: {weather.main?.temp_max}</p>
+      <p>Today's Low: {weather.main?.temp_min}</p>
     </div>
   );
 }
