@@ -52,21 +52,21 @@ function App() {
     getData();
   }, []);
 
-  let [quote, setQuote] = useState([])
-  let [author, setAuthor] = useState([])
-  useEffect( () => { 
+  let [quote, setQuote] = useState([]);
+  let [author, setAuthor] = useState([]);
+  useEffect(() => {
     async function getQuote() {
-    let res = await axios.get( `https://api.quotable.io/random` )
-    console.log(res)
-    console.log(res.data.content)
-    setQuote(res.data.content)
-    setAuthor(res.data.author)
+      let res = await axios.get(`https://api.quotable.io/random`);
+      console.log(res);
+      console.log(res.data.content);
+      setQuote(res.data.content);
+      setAuthor(res.data.author);
     }
-    getQuote()
-    }, [] )
+    getQuote();
+  }, []);
 
-    let [advice, setAdvice] = useState([]);
-    useEffect(() => {
+  let [advice, setAdvice] = useState([]);
+  useEffect(() => {
     async function getData() {
       let res = await axios.get("https://api.adviceslip.com/advice");
       setAdvice(res.data.slip);
@@ -86,10 +86,19 @@ function App() {
           path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
-        <Route path="/CalmPage" render={() => <GetCalm quoteProp={quote} authorProp={author} adviceProp={advice}/>} />
+        <Route
+          path="/CalmPage"
+          render={() => (
+            <GetCalm
+              quoteProp={quote}
+              authorProp={author}
+              adviceProp={advice}
+            />
+          )}
+        />
         <Route path="/WeatherPage" render={() => <GetWeather />} />
         <Route path="/TechPage" render={() => <GetTech techProp={tech} />} />
-        <Route path="/CreatorPage" render={() => <Creator /> } />
+        <Route path="/CreatorPage" render={() => <Creator />} />
       </Switch>
     </div>
   );
