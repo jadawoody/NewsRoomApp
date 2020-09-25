@@ -2,7 +2,7 @@ import React from "react";
 // import axios from 'axios';
 
 function GetTech(props) {
-  // console.log(props);
+   console.log(props);
   let techNews = props.techProp.map((eachTecharticle) => {
     // console.log(eachTecharticle)
     return (

@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OurLogo from '../images/OFFISHnewsroomLogo3.png'
 
 function Home(props) {
   return (
     <div className="black">
       <nav className="ghost">
+
         <ul className="spooky">
+        
+        <img src={OurLogo} alt="our news logo" className="ourlogo" ></img>
+          
           <li className="trick">
             <Link to={`/NewsPage`}>Get News</Link>
           </li>

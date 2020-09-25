@@ -52,10 +52,24 @@ function App() {
     getData();
   }, []);
 
+  let [quote, setQuote] = useState([])
+  let [author, setAuthor] = useState([])
+  useEffect( () => { 
+    async function getQuote() {
+    let res = await axios.get( `https://api.quotable.io/random` )
+    console.log(res)
+    console.log(res.data.content)
+    setQuote(res.data.content)
+    setAuthor(res.data.author)
+    }
+    getQuote()
+    }, [] )
+
   return (
     <div className="App">
       <h3>Welcome to NewsApp!</h3>
 
+    
       <Switch>
         <Route path="/HomePage" render={() => <Home />} />
         <Route
@@ -67,7 +81,7 @@ function App() {
           path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
-        <Route path="/CalmPage" render={() => <GetCalm />} />
+        <Route path="/CalmPage" render={() => <GetCalm quoteProp={quote} authorProp={author} />} />
         <Route path="/WeatherPage" render={() => <GetWeather />} />
         <Route path="/TechPage" render={() => <GetTech techProp={tech} />} />
       </Switch>
