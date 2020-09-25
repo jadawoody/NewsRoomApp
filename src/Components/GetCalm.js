@@ -1,29 +1,27 @@
-import React from 'react';
+import React from "react";
 
 function GetCalm(props) {
      console.log(props)
      
-// let words = props.quoteProp.map((eachquote) => {
-//     console.log(eachquote)
-    // return (
-    //     <div>
-    //       <ul className="orange">
-    //         <li className="pumpkin">
-    //           <Link>{eachquote?.content}</Link>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   )
-// }) 
     return (
         <div>
             <h3>Calming Corner</h3>
-            {props.quoteProp}
+            <p>
+                {props.quoteProp}
+                <br/>
+                -{props.authorProp}
+                </p>
             <br/>
-            -{props.authorProp}
+            <p>{props.adviceProp.advice}</p>
             {/* <p>{words}</p> */}
         </div>
     );
+
+//   function GetNewAdvice() {
+//     return <div>{props.adviceProp}</div>;
+//   }
+    //   <button onClick={GetNewAdvice()}>Advice!</button>
+   
 }
 
 export default GetCalm;
