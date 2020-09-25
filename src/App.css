@@ -66,7 +66,7 @@
   text-decoration: none;
 }
 .black {
-  margin-right: 5%;
+  /* margin-right: 3%; */
 }
 .homeContainer {
   display: flex;
@@ -110,4 +110,8 @@
 .divOfCreators{
   display: flex;
   justify-content: space-around;
+}
+#bio{
+  font-size: 11px;
+  width: 40vw;
 }

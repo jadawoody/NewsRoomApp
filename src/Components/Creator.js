@@ -13,9 +13,15 @@ function Creator(props) {
         <div className="divOfCreators">
             <article>
                 <p>Rebecca Sell</p>
+                <img></img>
+                <p id="bio">Cupcake ipsum dolor sit amet cake. Chupa chups cupcake pie toffee gingerbread biscuit carrot cake candy canes. Candy canes tart croissant. Sweet I love sesame snaps. Icing I love sugar plum gummies pudding macaroon tootsie roll. Gummi bears caramels sugar plum pastry gummies biscuit danish. Lollipop topping chocolate bar tootsie roll jelly croissant danish.</p>
+                <Link>Visit Rebecca's LinkedIn Profile</Link>
             </article>
             <article>
                 <p>Jada Woody</p>
+                <img></img>
+                <p id="bio">Cupcake ipsum dolor sit amet cake. Chupa chups cupcake pie toffee gingerbread biscuit carrot cake candy canes. Candy canes tart croissant. Sweet I love sesame snaps. Icing I love sugar plum gummies pudding macaroon tootsie roll. Gummi bears caramels sugar plum pastry gummies biscuit danish. Lollipop topping chocolate bar tootsie roll jelly croissant danish.</p>
+                <Link>Visit Jada's LinkedIn Profile</Link>
             </article>
         </div>
       </div>
