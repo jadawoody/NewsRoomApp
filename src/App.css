@@ -115,3 +115,6 @@
   font-size: 11px;
   width: 40vw;
 }
+.grid-item a {
+  text-decoration: none;
+}

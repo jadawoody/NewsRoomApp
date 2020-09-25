@@ -27,7 +27,7 @@ function GetWeather(props) {
   return (
     <div>
     <header className="logoAllPage">
-    <Link to={`/HomePage`}><img src={OurLogo} alt="our news logo" className="ourlogo" ></img></Link>
+    <Link to={`/`}><img src={OurLogo} alt="our news logo" className="ourlogo" ></img></Link>
     </header>
 
       <h3>Welcome To The Weather Page!</h3>

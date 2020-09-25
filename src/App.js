@@ -76,18 +76,18 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/HomePage" render={() => <Home />} />
+        <Route exact path="/" render={() => <Home />} />
         <Route
-          path="/NewsPage"
+          exact path="/NewsPage"
           render={() => <GetNews newsDataProp={newsData} />}
         />
         {/* WHY ARE WE SETTING THE STATE TO THE STATE?? We thought we should be setting the state to the variable holding our map through the API */}
         <Route
-          path="/SportsPage"
+          exact path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
         <Route
-          path="/CalmPage"
+          exact path="/CalmPage"
           render={() => (
             <GetCalm
               quoteProp={quote}
@@ -96,9 +96,9 @@ function App() {
             />
           )}
         />
-        <Route path="/WeatherPage" render={() => <GetWeather />} />
-        <Route path="/TechPage" render={() => <GetTech techProp={tech} />} />
-        <Route path="/CreatorPage" render={() => <Creator />} />
+        <Route exact path="/WeatherPage" render={() => <GetWeather />} />
+        <Route exact path="/TechPage" render={() => <GetTech techProp={tech} />} />
+        <Route exact path="/CreatorPage" render={() => <Creator />} />
       </Switch>
     </div>
   );

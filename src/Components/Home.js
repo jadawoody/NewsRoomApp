@@ -17,21 +17,24 @@ function Home(props) {
         </header>
       </div>
       <div className="black">
+
         <nav className="ghost">
           <img src={OurLogo} alt="our news logo" className="homelogo"></img>
+
           <div className="row1">
             <div className="grid-item">
               <Link to={`/NewsPage`}>
                 <img className="logo" src={News} />
               </Link>
-              <span>Top News Headlines</span>
+              <Link to={`/NewsPage`}><span>News Headlines</span></Link>
             </div>
+
             <div className="grid-item">
               <Link to={`/WeatherPage`}>
                 {" "}
                 <img className="logo" src={Sun} />
               </Link>
-              <span>Today's Weather</span>
+              <Link to={`/WeatherPage`}><span>Today's Weather</span></Link>
             </div>
 
             <div className="grid-item">
@@ -39,7 +42,7 @@ function Home(props) {
                 {" "}
                 <img className="logo" src={Sports} />
               </Link>
-              <span>Sports Update</span>
+              <Link to={`/SportsPage`}><span>Sports Updates</span></Link>
             </div>
           </div>
           <div className="row2">
@@ -47,19 +50,19 @@ function Home(props) {
               <Link to={`/CalmPage`}>
                 <img className="logo" src={Calm} />
               </Link>
-              <span>Calming Corner</span>
+              <Link to={`/CalmPage`}><span>Calming Corner</span></Link>
             </div>
             <div className="grid-item">
               <Link to={`/TechPage`}>
                 <img className="logo" src={Tech} />
               </Link>
-              <span>Tech Updates</span>
+              <Link to={`/TechPage`}><span>Tech Updates</span></Link>
             </div>
             <div className="grid-item">
               <Link to={`/CreatorPage`}>
                 <img className="logo" src={Creators} />
               </Link>
-              <span>Meet the Creators</span>
+              <Link to={`/CreatorPage`}><span>Meet the Creators</span></Link>
             </div>
           </div>
         </nav>
