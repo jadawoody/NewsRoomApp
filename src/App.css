@@ -118,3 +118,13 @@
 .grid-item a {
   text-decoration: none;
 }
+#jadaPic{
+  height: 30vh;
+  width: auto;
+  border-radius: 5%;
+}
+/* #rebeccaPic{
+  height: 30vh;
+  width: auto;
+  border-radius: 5%;
+} */

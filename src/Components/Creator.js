@@ -1,7 +1,7 @@
 import React from 'react';
 import OurLogo from '../images/OURLOGO$.png';
 import {Link} from 'react-router-dom';
-
+import JadaPic from '../images/headshot jw copy.jpeg'
 function Creator(props) {
     return (
       <div>
@@ -13,16 +13,15 @@ function Creator(props) {
         <div className="divOfCreators">
             <article>
                 <p>Rebecca Sell</p>
-                <img></img>
+                {/* <img src={RebeccaPic} alt="photoofrebecca" id="rebeccaPic"></img> */}
                 <p id="bio">Cupcake ipsum dolor sit amet cake. Chupa chups cupcake pie toffee gingerbread biscuit carrot cake candy canes. Candy canes tart croissant. Sweet I love sesame snaps. Icing I love sugar plum gummies pudding macaroon tootsie roll. Gummi bears caramels sugar plum pastry gummies biscuit danish. Lollipop topping chocolate bar tootsie roll jelly croissant danish.</p>
-                <Link>Visit Rebecca's LinkedIn Profile</Link>
+                <a href="https://www.linkedin.com/in/rebecca-sell-/" className="profileLink">Visit Rebecca's LinkedIn Profile</a>
             </article>
             <article>
                 <p>Jada Woody</p>
-                <img></img>
+                <img src={JadaPic} alt="photoofjada" id="jadaPic"></img>
                 <p id="bio">Cupcake ipsum dolor sit amet cake. Chupa chups cupcake pie toffee gingerbread biscuit carrot cake candy canes. Candy canes tart croissant. Sweet I love sesame snaps. Icing I love sugar plum gummies pudding macaroon tootsie roll. Gummi bears caramels sugar plum pastry gummies biscuit danish. Lollipop topping chocolate bar tootsie roll jelly croissant danish.</p>
-                <a href="www.linkedin.com/in/jada-woody">Visit Jada's LinkedIn Profile</a>
-                {/* this a tag is changing the url when clicked, but not actually rendering my profile...do I need a function that will be called in Switch/Route in App.js?? */}
+                <a href="https://www.linkedin.com/in/jada-woody" className="profileLink">Visit Jada's LinkedIn Profile</a>
             </article>
         </div>
       </div>
