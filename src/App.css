@@ -97,7 +97,7 @@
 }
 .lilFooter {
   font-size: 10px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
   margin-top: 10vh;
 }
 .logoAllPage {
@@ -124,7 +124,7 @@
 }
 #rebeccaPic {
   height: 30vh;
-  width: auto;
+  width: 22vh;
   border-radius: 5%;
 }
 

@@ -42,7 +42,7 @@ function GetCalm(props) {
           <p id="calm">{props.adviceProp.advice}</p>
 
           <button id="adviceButton" onClick={GetNewAdvice}>
-            Get Advice
+            Get New Advice
           </button>
           <p id="calm">{newadvice}</p>
         </article>
