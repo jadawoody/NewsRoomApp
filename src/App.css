@@ -97,7 +97,7 @@
 }
 .lilFooter {
   font-size: 10px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
   margin-top: 10vh;
 }
 .logoAllPage {
@@ -124,6 +124,24 @@
 }
 #rebeccaPic {
   height: 30vh;
-  width: auto;
+  width: 22vh;
   border-radius: 5%;
+}
+.creatorArticle{
+  padding: 1%;
+  border: inset #5ea3ff 2px;
+  border-radius: 2%;
+}
+#discript{
+  color: #5ea3ff;
+}
+.navheadbar{
+  list-style: none;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+.navheadbar a{
+  list-style: none;
+  text-decoration: none;
 }
