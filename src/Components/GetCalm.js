@@ -4,20 +4,22 @@ import OurLogo from "../images/OURLOGO$.png";
 import axios from "axios";
 
 function GetCalm(props) {
-  console.log(props);
-  let [advice, setAdvice] = useState("");
+  console.log(props.adviceProp);
+
+  let [newadvice, setNewAdvice] = useState("");
 
   const GetNewAdvice = () => {
     // console.log(props, props.adviceProp.advice);
 
     async function getData() {
       let res = await axios.get("https://api.adviceslip.com/advice");
-      setAdvice(res.data.slip.advice);
+      setNewAdvice(res.data.slip.advice);
     }
-    getData();
 
-    // return <div>{props,adviceProp}</div>;
+    getData();
   };
+  // return <div>{props,adviceProp}</div>;
+
   return (
     <div>
       <header className="logoAllPage">
@@ -26,19 +28,27 @@ function GetCalm(props) {
         </Link>
       </header>
       <h3>Calming Corner</h3>
-      <div className="insQuote"></div>
-      <p>
-        {props.quoteProp}
-        <br />-{props.authorProp}
-      </p>
-      <br />
-      <p>{props.adviceProp.advice}</p>
-      <div className="advicebox">
-        <button onClick={GetNewAdvice}></button>
-        <p>{advice}</p>
-        {/* <p>{words}</p> */}
+      <div className="calmContent">
+        <article id="calmBox">
+          <h4 id="calm">Get Inspiration</h4>
+          <p id="calm">
+            {props.quoteProp}
+            <br />-{props.authorProp}
+          </p>
+          <br />
+        </article>
+        <article id="calmBox">
+          <h4 id="calm">Get Advice</h4>
+          <p id="calm">{props.adviceProp.advice}</p>
+
+          <button id="adviceButton" onClick={GetNewAdvice}>
+            Get Advice
+          </button>
+          <p id="calm">{newadvice}</p>
+        </article>
       </div>
     </div>
   );
 }
+
 export default GetCalm;

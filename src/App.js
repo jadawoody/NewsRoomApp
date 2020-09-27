@@ -70,6 +70,7 @@ function App() {
     async function getData() {
       let res = await axios.get("https://api.adviceslip.com/advice");
       setAdvice(res.data.slip);
+      console.log(res.data.slip.advice);
     }
     getData();
   }, []);
@@ -78,16 +79,19 @@ function App() {
       <Switch>
         <Route exact path="/" render={() => <Home />} />
         <Route
-          exact path="/NewsPage"
+          exact
+          path="/NewsPage"
           render={() => <GetNews newsDataProp={newsData} />}
         />
         {/* WHY ARE WE SETTING THE STATE TO THE STATE?? We thought we should be setting the state to the variable holding our map through the API */}
         <Route
-          exact path="/SportsPage"
+          exact
+          path="/SportsPage"
           render={() => <GetSports sportsDataProp={sportsData} />}
         />
         <Route
-          exact path="/CalmPage"
+          exact
+          path="/CalmPage"
           render={() => (
             <GetCalm
               quoteProp={quote}
@@ -97,7 +101,11 @@ function App() {
           )}
         />
         <Route exact path="/WeatherPage" render={() => <GetWeather />} />
-        <Route exact path="/TechPage" render={() => <GetTech techProp={tech} />} />
+        <Route
+          exact
+          path="/TechPage"
+          render={() => <GetTech techProp={tech} />}
+        />
         <Route exact path="/CreatorPage" render={() => <Creator />} />
       </Switch>
     </div>
