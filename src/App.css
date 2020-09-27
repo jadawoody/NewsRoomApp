@@ -1,13 +1,12 @@
 * {
-  font-family: 'Patua One', cursive;
-  color: #393F65;
+  font-family: "Patua One", cursive;
+  color: #393f65;
   background-color: rgb(214, 230, 245);
 }
 .App {
   text-align: center;
   /* background: url("./images/blurredLines.png");
   background-size: contain;   */
-  
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
@@ -74,7 +73,7 @@
   align-items: center;
   /* border: black 2px solid; */
 }
-.ourlogo{
+.ourlogo {
   height: 20vh;
   width: auto;
   position: relative;
@@ -83,10 +82,10 @@
   /* margin-top: 5vh; */
   margin-bottom: 5vh;
 }
-.homeHeader{
+.homeHeader {
   margin-bottom: 5vh;
 }
-.homelogo{
+.homelogo {
   height: 20vh;
   width: auto;
   position: relative;
@@ -104,27 +103,27 @@
 .logoAllPage {
   margin-top: 5vh;
 }
-.ghost{
+.ghost {
   margin-top: -5vh;
 }
-.divOfCreators{
+.divOfCreators {
   display: flex;
   justify-content: space-around;
 }
-#bio{
+#bio {
   font-size: 11px;
   width: 40vw;
 }
 .grid-item a {
   text-decoration: none;
 }
-#jadaPic{
+#jadaPic {
   height: 30vh;
   width: auto;
   border-radius: 5%;
 }
-/* #rebeccaPic{
+#rebeccaPic {
   height: 30vh;
   width: auto;
   border-radius: 5%;
-} */
+}
