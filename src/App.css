@@ -139,21 +139,23 @@
   width: 22vh;
   border-radius: 5%;
 }
-.creatorArticle{
-  padding: 1%;
-  border: inset #5ea3ff 2px;
-  border-radius: 2%;
-}
-#discript{
-  color: #5ea3ff;
-}
-.navheadbar{
-  list-style: none;
-  font-size: 10px;
+
+.calmContent {
   display: flex;
   justify-content: space-around;
 }
-.navheadbar a{
-  list-style: none;
-  text-decoration: none;
+#calmBox {
+  width: 40%;
+  height: auto;
+  border-radius: 5%;
+}
+#calmBox,
+#calm {
+  background: RGB(94, 163, 255);
+}
+#adviceButton {
+  background: RGB(188, 224, 235);
+  padding-right: 5%;
+  padding-left: 5%;
+  border-radius: 2em;
 }
