@@ -62,8 +62,7 @@ function Creator(props) {
             of October 2020, she has been a graduate alum of Ironhack Miami.
             Jada plans to use the skills learned to develop a comprehensive
             website and software engineering department at Encompass HealthCare
-            and to later launch a career in web development! For more information on her
-            experience or to get in touch with Jada, visit her LinkedIn profile,
+            and to later launch a career in web development! For more information or to get in touch with Jada, visit her LinkedIn profile,
             link below!
           </p>
           <a

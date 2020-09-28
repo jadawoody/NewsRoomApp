@@ -110,6 +110,12 @@
   font-size: 11px;
   width: 40vw;
 }
+@media (min-width: 2000px){
+  #bio {
+    font-size: 15px;
+    width: 35vw;
+  }
+}
 .row1 {
   display: flex;
   justify-content: center;
