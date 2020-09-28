@@ -12,13 +12,28 @@ import Creator from "./Components/Creator";
 // import news from './news.json';
 
 function App() {
+  // fetch("https://newscatcher.p.rapidapi.com/v1/search?media=True&sort_by=relevancy&lang=en&page=1&q=Elon%20Musk", {
+  //   "method": "GET",
+  //   "headers": {
+  //     "x-rapidapi-host": "newscatcher.p.rapidapi.com",
+  //     "x-rapidapi-key": "79c208b29dmshca6fa50a24dc9fep186483jsn89697872cd62"
+  //   }
+  // })
+  // .then(response => {
+  //   console.log(response);
+  // })
+  // .catch(err => {
+  //   console.log(err);
+  // });
+
   let [newsData, setNewsData] = useState([]);
   useEffect(() => {
     // console.log(process.env);
     async function getData() {
       let res = await axios.get(
-        "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
+        "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
       );
+      console.log(res)
       setNewsData(res.data.articles);
     }
     getData();
