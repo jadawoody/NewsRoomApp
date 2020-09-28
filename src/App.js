@@ -30,7 +30,7 @@ function App() {
     async function getData() {
       // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
-        "http://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=8548ffbce9044871b20fdb22e4385a07"
+        "https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=8548ffbce9044871b20fdb22e4385a07"
       );
 
       setSportsData(res.data.articles);
@@ -44,7 +44,7 @@ function App() {
   useEffect(() => {
     async function getData() {
       let res = await axios.get(
-        "http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
+        "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
       );
       setTech(res.data.articles);
       console.log(res.data.articles);
