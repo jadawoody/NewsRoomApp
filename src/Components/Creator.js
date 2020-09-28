@@ -26,7 +26,7 @@ function Creator(props) {
           <p>Rebecca Sell</p>
           <img src={RebeccaPic} alt="photoofrebecca" id="rebeccaPic"></img>
           <p id="bio">
-            Rebecca Sell is a Full-Stack Developer based in Miami, Florida. As of October 2020, Rebecca has been a graduate alum of Ironhack Miami! Rebecca plans to use her skills learned at Ironhack to launch a career in web development! Rebecca is intersted in projects...
+            Rebecca Sell is a Full-Stack Developer based in Miami, Florida. As of October 2020, Rebecca has been a graduate alum of Ironhack Miami! Rebecca plans to use her skills learned at Ironhack to launch a career in web development! Rebecca is intersted in projects including the following languages...
             To get in touch with Rebecca and to learn more about her professional experience, visit her LinkedIn page, linked below! 
           </p>
           <a
@@ -40,7 +40,7 @@ function Creator(props) {
           <p>Jada Woody</p>
           <img src={JadaPic} alt="photoofjada" id="jadaPic"></img>
           <p id="bio">
-            Jada Woody is a Full-Stack Developer based in Detroit, Michigan. As of October 2020, she has been a graduate alum of Ironhack Miami. Jada plans to use the skills learned to develop a comprehensive website and software engineering department at Encompass HealthCare and to later launch a career in web development! For more information or to get in touch with Jada, visit her LinkedIn profile, link below!
+            Jada Woody is a Full-Stack Developer based in Detroit, Michigan. As of October 2020, she has been a graduate alum of Ironhack Miami. Jada plans to use the skills learned to develop a comprehensive website and software engineering department at Encompass HealthCare and to later launch a career in web development! Jada is interested in working more with Node.js and React. For more information on her experience or to get in touch with Jada, visit her LinkedIn profile, link below!
           </p>
           <a
             href="https://www.linkedin.com/in/jada-woody"
