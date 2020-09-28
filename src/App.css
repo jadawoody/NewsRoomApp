@@ -150,7 +150,7 @@
   justify-content: space-around;
   border-radius: 50%;
   height: 15vh;
-  width: 15vh;
+  width: 15vw;
   padding-top: 3vh;
   padding-bottom: 5vh;
   padding-left: 5vh;
@@ -165,7 +165,7 @@
 }
 
 #ctr{
-  font-size: 9px;
+  font-size: 10px;
 }
 
 #jadaPic {
