@@ -53,6 +53,7 @@ function GetCalm(props) {
           </button>
           <p id="calm">
             {quote}
+            <br></br>
             {author}
           </p>
         </article>
