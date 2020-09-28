@@ -31,7 +31,7 @@ function App() {
     // console.log(process.env);
     async function getData() {
       let res = await axios.get(
-        "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
+        "https://saurav.tech/NewsAPI/everything/cnn.json"
       );
       console.log(res)
       setNewsData(res.data.articles);
@@ -45,7 +45,7 @@ function App() {
     async function getData() {
       // let res = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=b4a64c5bb417492fba2da8efffe06acb')
       let res = await axios.get(
-        "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=8548ffbce9044871b20fdb22e4385a07"
+        "https://saurav.tech/NewsAPI/top-headlines/category/sports/in.json"
       );
 
       setSportsData(res.data.articles);
@@ -59,7 +59,7 @@ function App() {
   useEffect(() => {
     async function getData() {
       let res = await axios.get(
-        "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=648ce50d8c134f1cbb0252360ef3ec6a"
+        "https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json"
       );
       setTech(res.data.articles);
       console.log(res.data.articles);
