@@ -8,7 +8,7 @@ function GetTech(props) {
   let techNews = props.techProp.map((eachTecharticle) => {
     // console.log(eachTecharticle)
     return (
-      <div>
+      <div className="carving">
         <ul className="orange">
           <img
             className="treat"
