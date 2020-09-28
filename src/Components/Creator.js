@@ -7,6 +7,7 @@ function Creator(props) {
   return (
     <div>
       <header className="logoAllPage">
+      
         <ul className="navheadbar">
           <li><Link to={`/NewsPage`}>News</Link></li>
           <li><Link to={`/WeatherPage`}>Weather</Link></li>

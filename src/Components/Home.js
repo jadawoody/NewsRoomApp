@@ -26,7 +26,8 @@ function Home(props) {
               <Link to={`/NewsPage`}>
                 <img className="logo" src={News} />
               </Link>
-              <Link to={`/NewsPage`}><span>News Headlines</span></Link>
+              {/* <br/> */}
+              <Link to={`/NewsPage`}><span className="txt">News Headlines</span></Link>
             </div>
 
             <div className="grid-item">
@@ -34,7 +35,8 @@ function Home(props) {
                 {" "}
                 <img className="logo" src={Sun} />
               </Link>
-              <Link to={`/WeatherPage`}><span>Today's Weather</span></Link>
+              {/* <br/> */}
+              <Link to={`/WeatherPage`}><span className="txt">Today's Weather</span></Link>
             </div>
 
             <div className="grid-item">
@@ -42,7 +44,8 @@ function Home(props) {
                 {" "}
                 <img className="logo" src={Sports} />
               </Link>
-              <Link to={`/SportsPage`}><span>Sports Updates</span></Link>
+              {/* <br/> */}
+              <Link to={`/SportsPage`}><span className="txt">Sports Updates</span></Link>
             </div>
           </div>
           <div className="row2">
@@ -50,19 +53,22 @@ function Home(props) {
               <Link to={`/CalmPage`}>
                 <img className="logo" src={Calm} />
               </Link>
-              <Link to={`/CalmPage`}><span>Calming Corner</span></Link>
+              {/* <br/> */}
+              <Link to={`/CalmPage`}><span className="txt">Calming Corner</span></Link>
             </div>
             <div className="grid-item">
               <Link to={`/TechPage`}>
                 <img className="logo" src={Tech} />
               </Link>
-              <Link to={`/TechPage`}><span>Tech Updates</span></Link>
+              {/* <br/> */}
+              <Link to={`/TechPage`}><span className="txt">Tech Updates</span></Link>
             </div>
             <div className="grid-item">
               <Link to={`/CreatorPage`}>
                 <img className="logo" src={Creators} />
               </Link>
-              <Link to={`/CreatorPage`}><span>Meet the Creators</span></Link>
+              {/* <br/> */}
+              <Link to={`/CreatorPage`}><span className="txt">Meet the Creators</span></Link>
             </div>
           </div>
         </nav>

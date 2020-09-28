@@ -23,6 +23,14 @@ function GetCalm(props) {
   return (
     <div>
       <header className="logoAllPage">
+      <ul className="navheadbar">
+          <li><Link to={`/NewsPage`}>News</Link></li>
+          <li><Link to={`/WeatherPage`}>Weather</Link></li>
+          <li><Link to={`/SportsPage`}>Sports</Link></li>
+          <li><Link to={`/CalmPage`}>Calming Corner</Link></li>
+          <li><Link to={`/TechPage`}>Tech</Link></li>
+          <li><Link to={`/CreatorPage`}>Creators</Link></li>
+          </ul>
         <Link to={`/`}>
           <img src={OurLogo} alt="our news logo" className="ourlogo"></img>
         </Link>
