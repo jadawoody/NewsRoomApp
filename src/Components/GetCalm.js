@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import OurLogo from "../images/OURLOGO$.png";
 import axios from "axios";
@@ -7,6 +7,8 @@ function GetCalm(props) {
   console.log(props.adviceProp);
 
   let [newadvice, setNewAdvice] = useState("");
+  let [quote, setQuote] = useState([]);
+  let [author, setAuthor] = useState([]);
 
   const GetNewAdvice = () => {
     // console.log(props, props.adviceProp.advice);
@@ -17,6 +19,16 @@ function GetCalm(props) {
     }
 
     getData();
+  };
+  const GetNewInspiration = () => {
+    async function getQuote() {
+      let res = await axios.get(`https://api.quotable.io/random`);
+      console.log(res);
+      console.log(res.data.content);
+      setQuote(res.data.content);
+      setAuthor(res.data.author);
+    }
+    getQuote();
   };
   // return <div>{props,adviceProp}</div>;
 
@@ -44,6 +56,14 @@ function GetCalm(props) {
             <br />-{props.authorProp}
           </p>
           <br />
+          <button id="adviceButton" onClick={GetNewInspiration}>
+            Get New Inspiration
+          </button>
+          <p id="calm">
+            {quote}
+            <br></br>
+            {author}
+          </p>
         </article>
         <article id="calmBox">
           <h4 id="calm">Get Advice</h4>

@@ -68,7 +68,7 @@ function Home(props) {
                 <img className="logo" src={Creators} />
               </Link>
               {/* <br/> */}
-              <Link to={`/CreatorPage`}><span className="txt">Meet the Creators</span></Link>
+              <Link to={`/CreatorPage`}><span id="ctr" className="txt">Meet the Creators</span></Link>
             </div>
           </div>
         </nav>
