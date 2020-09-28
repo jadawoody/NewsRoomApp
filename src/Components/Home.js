@@ -17,7 +17,6 @@ function Home(props) {
         </header>
       </div>
       <div className="black">
-
         <nav className="ghost">
           <img src={OurLogo} alt="our news logo" className="homelogo"></img>
 
@@ -27,7 +26,9 @@ function Home(props) {
                 <img className="logo" src={News} />
               </Link>
               {/* <br/> */}
-              <Link to={`/NewsPage`}><span className="txt">News Headlines</span></Link>
+              <Link to={`/NewsPage`}>
+                <span className="txt">News Headlines</span>
+              </Link>
             </div>
 
             <div className="grid-item">
@@ -36,7 +37,9 @@ function Home(props) {
                 <img className="logo" src={Sun} />
               </Link>
               {/* <br/> */}
-              <Link to={`/WeatherPage`}><span className="txt">Today's Weather</span></Link>
+              <Link to={`/WeatherPage`}>
+                <span className="txt">Today's Weather</span>
+              </Link>
             </div>
 
             <div className="grid-item">
@@ -45,7 +48,9 @@ function Home(props) {
                 <img className="logo" src={Sports} />
               </Link>
               {/* <br/> */}
-              <Link to={`/SportsPage`}><span className="txt">Sports Updates</span></Link>
+              <Link to={`/SportsPage`}>
+                <span className="txt">Sports Updates</span>
+              </Link>
             </div>
           </div>
           <div className="row2">
@@ -54,21 +59,29 @@ function Home(props) {
                 <img className="logo" src={Calm} />
               </Link>
               {/* <br/> */}
-              <Link to={`/CalmPage`}><span className="txt">Calming Corner</span></Link>
+              <Link to={`/CalmPage`}>
+                <span className="txt">Calming Corner</span>
+              </Link>
             </div>
             <div className="grid-item">
               <Link to={`/TechPage`}>
                 <img className="logo" src={Tech} />
               </Link>
-              {/* <br/> */}
-              <Link to={`/TechPage`}><span className="txt">Tech Updates</span></Link>
+              {/* <br /> */}
+              <Link to={`/TechPage`}>
+                <span className="txt">Tech Updates</span>
+              </Link>
             </div>
             <div className="grid-item">
               <Link to={`/CreatorPage`}>
                 <img className="logo" src={Creators} />
               </Link>
-              {/* <br/> */}
-              <Link to={`/CreatorPage`}><span id="ctr" className="txt">Meet the Creators</span></Link>
+              {/* <br /> */}
+              <Link to={`/CreatorPage`}>
+                <span id="ctr" className="txt">
+                  Meet the Creators
+                </span>
+              </Link>
             </div>
           </div>
         </nav>

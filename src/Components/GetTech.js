@@ -6,7 +6,7 @@ import OurLogo from "../images/OURLOGO$.png";
 function GetTech(props) {
   console.log(props);
   let techNews = props.techProp.map((eachTecharticle) => {
-    // console.log(eachTecharticle)
+    console.log(eachTecharticle);
     return (
       <div>
         <ul className="orange">
